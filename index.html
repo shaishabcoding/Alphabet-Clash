@@ -18,6 +18,11 @@
       href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <style>
+      kbd:hover {
+        background: #fffa;
+      }
+    </style>
   </head>
   <body class="font-[Poppins]">
     <main
@@ -29,7 +34,7 @@
           class="text-white flex items-center justify-center text-center h-screen"
         >
           <div>
-            <h1 class="text-8xl font-[Anton]">ALPHABET CLASH</h1>
+            <h1 class="text-6xl lg:text-8xl font-[Anton]">ALPHABET CLASH</h1>
             <p class="my-8">
               Unleash Your Keyboard Kung Fu : Press “Enter” to Play
             </p>
@@ -45,10 +50,10 @@
           <div>
             <!-- screen -->
             <div
-              class="artboard artboard-horizontal phone-1 bg-[#fffa] rounded-lg border-8 border-gray-700 relative"
+              class="w-full lg:w-[600px] aspect-video bg-[#fffa] rounded-lg border-8 border-gray-700 relative"
             >
               <p
-                class="bg-gray-700 p-2 rounded-b-lg absolute top-0 left-1/2 -translate-x-1/2"
+                class="bg-gray-700 p-2 rounded-b-lg absolute top-0 left-1/2 -translate-x-1/2 text-xs lg:text-sm"
               >
                 <span class="animate-pulse"
                   >Don't watch keyboard while playing...</span
@@ -97,10 +102,11 @@
             <!-- heart and score -->
             <div class="flex justify-between mt-8">
               <span class="bg-purple-600 py-1 px-4 rounded-full"
-                >Life <span class="animate-pulse">🤍</span> 3</span
+                >Life <span class="animate-pulse">🤍</span>
+                <span id="life">3</span></span
               >
               <span class="bg-pink-600 py-1 px-4 rounded-full"
-                >Score 💲 34</span
+                >Score 💲 <span id="result">0</span></span
               >
             </div>
           </div>
@@ -114,8 +120,12 @@
           <div
             class="bg-gradient-to-br shadow-md from-[#fffa] to-[#fff2] p-4 rounded-lg"
           >
-            <h3 class="text-4xl font-bold">Score : 14</h3>
-            <button class="btn bg-white text-black my-4">Play Now</button>
+            <h3 class="text-4xl font-bold">
+              Score : <span id="scoreBoard"></span>
+            </h3>
+            <button id="re-play" class="btn bg-white text-black my-4">
+              Play Now
+            </button>
             <p class="text-sm">Practice will make you Pro</p>
           </div>
         </div>
